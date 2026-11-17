@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to connect — Bobony Roleplay</title>
+  <meta name="description" content="Install FiveM, connect to Bobony Roleplay with our direct connect code, and fix the most common connection problems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="connect.html">
+
+<div id="site-header"></div>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="home.html">Home</a> / <span>Connect</span></div>
+      <span class="eyebrow">Five steps</span>
+      <h1>How to connect</h1>
+      <p class="lead">From a fresh install to standing in the city. If something goes wrong, jump to the fixes at the bottom before opening a ticket.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split" style="align-items:start">
+      <div class="reveal">
+        <h2 style="font-size:clamp(1.5rem,2.6vw,2rem)">Setup</h2>
+        <div class="steps" style="margin-top:24px">
+          <div class="step">
+            <span class="step__n">01</span>
+            <div><h3>Own GTA V on PC</h3><p>Steam, Epic or Rockstar launcher — any legitimate copy. Console versions are not supported.</p></div>
+          </div>
+          <div class="step">
+            <span class="step__n">02</span>
+            <div><h3>Install FiveM</h3><p>Download it from fivem.net and let it verify your game files. First launch takes a few minutes.</p></div>
+          </div>
+          <div class="step">
+            <span class="step__n">03</span>
+            <div><h3>Link your Discord</h3><p>Our servers authenticate through Discord, so your account must be in the community server before you connect.</p></div>
+          </div>
+          <div class="step">
+            <span class="step__n">04</span>
+            <div><h3>Press F8 and connect</h3><p>Open the console and paste the connect string below, or use the direct-connect link from Discord.</p></div>
+          </div>
+          <div class="step">
+            <span class="step__n">05</span>
+            <div><h3>Load the city</h3><p>First connection downloads the server assets — around 6 GB. Do it once, on a wired connection if you can.</p></div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:34px">Direct connect</h3>
+        <div class="copy-box" style="margin-top:12px">
+          <span><b>cfx.re/join/6jzpl6</b></span>
+          <button class="btn btn--ghost btn--sm" type="button" data-copy="cfx.re/join/6jzpl6">Copy</button>
+        </div>
+        <p style="font-size:0.82rem;margin-top:12px">Paste it in the FiveM console (F8) as <code>connect cfx.re/join/6jzpl6</code>, or open it in your browser with FiveM installed.</p>
+
+        <h3 style="margin-top:30px;font-size:1.05rem">PvP server</h3>
+        <div class="copy-box" style="margin-top:10px">
+          <span><b>cfx.re/join/r7kyq8</b></span>
+          <button class="btn btn--ghost btn--sm" type="button" data-copy="cfx.re/join/r7kyq8">Copy</button>
+        </div>
+        <p style="font-size:0.82rem;margin-top:12px">PvP is open to everyone — no allowlist. Paste <code>connect cfx.re/join/r7kyq8</code> in the F8 console, or use this code in your FiveM server browser.</p>
+      </div>
+
+      <aside class="card reveal" style="padding:28px">
+        <h3 style="font-size:1.25rem">Before your first session</h3>
+        <p style="font-size:0.88rem">A few things that make the first night smoother:</p>
+        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px">
+          <li style="font-size:0.88rem;color:var(--muted)">— A working microphone with push-to-talk configured</li>
+          <li style="font-size:0.88rem;color:var(--muted)">— Your character's name, background and one goal written down</li>
+          <li style="font-size:0.88rem;color:var(--muted)">— The rules read once, properly</li>
+          <li style="font-size:0.88rem;color:var(--muted)">— 25 GB of free disk space for assets and cache</li>
+          <li style="font-size:0.88rem;color:var(--muted)">— Voice activity set to push-to-talk to avoid hot-mic scenes</li>
+        </ul>
+        <a class="btn btn--primary btn--sm" href="join.html" style="width:100%;margin-top:22px">Apply for the allowlist</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Troubleshooting</span>
+        <h2>Common problems</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>"You are not allowlisted"</summary>
+          <p>Your Discord account is not linked to an approved application, or you are using a different account than the one you applied with. Open a ticket with your character name and we will check the record.</p>
+        </details>
+        <details>
+          <summary>Stuck on "Loading resources"</summary>
+          <p>Cancel the download, clear your FiveM cache folder, then reconnect. If it stalls again at the same percentage, your connection is dropping large files — try a wired link or a different DNS.</p>
+        </details>
+        <details>
+          <summary>No voice in game</summary>
+          <p>Check Windows input device, then the in-game voice settings, then whether you are in the correct voice channel. Push-to-talk is the safest setting and is required in some roleplay scenes.</p>
+        </details>
+        <details>
+          <summary>Low FPS or stutter</summary>
+          <p>Lower texture quality before anything else, disable any graphics mod, and make sure the city is on an SSD. Our client is tuned, but a heavily modded GTA install will still drag.</p>
+        </details>
+        <details>
+          <summary>Queue takes forever</summary>
+          <p>Peak hours are 19:00–23:00 CET. Subscribers and staff get priority; otherwise the queue moves as citizens disconnect. The <a href="status.html" style="color:var(--accent)">status page</a> shows live capacity.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/i18n.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply for the allowlist — Bobony Roleplay</title>
+  <meta name="description" content="Sign in with Discord and apply for the Bobony Roleplay allowlist. Requirements, the review process and the application form, in four steps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="join.html">
+
+<div id="site-header"></div>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="home.html">Home</a> / <span>Apply</span></div>
+      <span class="eyebrow">Whitelist · open</span>
+      <h1>Apply for the allowlist</h1>
+      <p class="lead">Ten minutes of writing is all it takes. Tell us who your character is and how you roleplay — we read every application by hand.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split" style="align-items:start">
+      <div class="reveal">
+        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem)">Four steps to the city</h2>
+        <div class="steps" style="margin-top:26px">
+          <div class="step">
+            <span class="step__n">01</span>
+            <div>
+              <h3>Sign in with Discord</h3>
+              <p>Every application is tied to a Discord account, so staff can verify you and reach you with a decision.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step__n">02</span>
+            <div>
+              <h3>Read the rules</h3>
+              <p>The application asks three questions that you can only answer correctly if you have read them. It takes eight minutes.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step__n">03</span>
+            <div>
+              <h3>Submit your character</h3>
+              <p>A name, a background and a reason to be in the city. No essay contest — we look for coherence and intent.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step__n">04</span>
+            <div>
+              <h3>Get reviewed</h3>
+              <p>Most applications are answered within 48 hours. If you are declined, you can reapply after seven days.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top:26px">
+          <strong>Requirements:</strong> be 18 or older, own a legal copy of GTA V on PC, have a working microphone, and speak one of Arabic, French or English well enough for voice roleplay.
+        </div>
+
+        <h3 style="margin-top:34px">Sponsored by a citizen?</h3>
+        <p>Trusted players can vouch for a newcomer through the Damana system. A sponsorship does not skip the rules — it puts your application in a faster queue and makes your mentor responsible for your first two weeks.</p>
+
+        <div class="fact-list" style="margin-top:26px">
+          <li><span>Applications open</span><b style="color:var(--accent)">Yes</b></li>
+          <li><span>Average review time</span><b>Under 48 h</b></li>
+          <li><span>Reapply after a decline</span><b>7 days</b></li>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+
+        <!-- Discord gate: shown until the applicant signs in -->
+        <div class="auth-gate" id="auth-gate" style="text-align:center">
+          <span class="auth-gate__icon" style="margin:0 auto 18px">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19 19 0 0 0 15.6 3l-.3.6a14 14 0 0 1 3.5 1.3 13.7 13.7 0 0 0-9.6 0A14 14 0 0 1 12.7 3.6L12.4 3a19 19 0 0 0-4.7 1.4C4.4 9.1 3.3 13.7 3.9 18.2a19 19 0 0 0 5.7 2.9l.7-1.2a12 12 0 0 1-2-1l.5-.4a13.6 13.6 0 0 0 10.4 0l.5.4a12 12 0 0 1-2 1l.7 1.2a19 19 0 0 0 5.7-2.9c.7-5.2-.9-9.8-3.8-13.8ZM9.3 15.4c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.9 2.2-1.9 2.2Zm5.4 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2Z"/></svg>
+          </span>
+          <h3>Sign in to continue</h3>
+          <p>Your account is tied to Discord, so we can confirm who you are and review your application.</p>
+          <a class="btn btn--primary" id="discord-login" href="/auth/discord" style="width:100%">Sign in with Discord</a>
+          <p class="form-note" style="text-align:center">We only read your username, ID and server roles.</p>
+        </div>
+
+        <!-- Application: unlocked after sign-in -->
+        <div id="apply-form-wrap" hidden>
+          <div class="auth-user">
+            <span class="dash-avatar dash-avatar--sm" id="auth-avatar" style="width:26px;height:26px;border-radius:50%;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;background:rgba(224,182,74,0.18);color:var(--accent);border:1px solid rgba(224,182,74,0.4);flex-shrink:0">B</span>
+            <span style="display:inline-flex;align-items:baseline;gap:6px">
+              Signed in as <b id="auth-username">—</b>
+              <span class="dash-handle" id="auth-handle" style="color:var(--muted);font-size:0.8rem"></span>
+            </span>
+            <button class="auth-user__out" type="button" id="auth-signout">Sign out</button>
+          </div>
+
+          <h3 style="font-size:1.5rem;margin-bottom:6px">Allowlist application</h3>
+          <p style="font-size:0.85rem;margin-bottom:24px">Your Discord handle is taken from your sign-in. Everything else is about your character.</p>
+
+          <form id="allowlist-form" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Character name</label>
+                <input id="name" name="name" type="text" placeholder="First Last" required>
+              </div>
+              <div class="field">
+                <label for="discord">Discord handle</label>
+                <input id="discord" name="discord" type="text" readonly required>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="age">Age</label>
+                <input id="age" name="age" type="number" min="18" max="99" placeholder="18+" required>
+              </div>
+              <div class="field">
+                <label for="lang">Main language</label>
+                <select id="lang" name="lang">
+                  <option>Arabic</option>
+                  <option>French</option>
+                  <option>English</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="desired-role">Role you are applying for</label>
+              <select id="desired-role" name="desiredRole">
+                <option value="">Select a role…</option>
+                <optgroup label="Legal">
+                  <option>BCPD : Bobony City Police Department</option>
+                  <option>BCSD : Bobony Sheriff Department</option>
+                  <option>DOJ : Department of Justice</option>
+                  <option>EMS : Bobony City Emergency Medical Services</option>
+                  <option>DMV : Bobony Department of Motor Vehicles</option>
+                  <option>Law Firm : Bobony City Law Firm</option>
+                </optgroup>
+                <optgroup label="Civilian">
+                  <option>Garage : Bobony City Auto Repair</option>
+                  <option>Dealer : Bobony City Vehicle Dealership</option>
+                  <option>Insurance : National Auto Insurance Agency</option>
+                  <option>Casino : Diamond Casino Bobony City</option>
+                </optgroup>
+              </select>
+              <p class="form-note" style="margin:8px 0 0">Legal roles are whitelisted again in Discord once you are through the allowlist.</p>
+            </div>
+
+            <div class="field">
+              <label for="background">Character background</label>
+              <textarea id="background" name="background" placeholder="Where were they born, what do they do for a living, what brought them to the city?" required></textarea>
+            </div>
+
+            <div class="field">
+              <label for="goals">What do you want to build here?</label>
+              <textarea id="goals" name="goals" placeholder="A business, a career in the LSPD, a crew, a quiet life…" style="min-height:96px"></textarea>
+            </div>
+
+            <label class="check">
+              <input type="checkbox" required>
+              <span>I have read the <a href="rules.html" style="color:var(--accent)">rules</a>, I am 18 or older, and I understand that this character will be permanently killed if I break the server's core roleplay standards.</span>
+            </label>
+
+            <button class="btn btn--primary" type="submit" style="width:100%">Submit application</button>
+            <p class="form-note">By applying you accept our <a href="terms.html" style="color:var(--accent)">terms of service</a> and our <a href="privacy.html" style="color:var(--accent)">privacy policy</a>.</p>
+            <div class="form-flash" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt section--tight">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">Before you apply</span>
+        <h2>What we look for</h2>
+      </div>
+      <div class="grid grid--3">
+        <article class="card reveal">
+          <span class="card__num">01</span>
+          <h3>Coherence</h3>
+          <p>A character that makes sense in the city — a job, a reason to be there, a flaw or two. Perfect characters are boring characters.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__num">02</span>
+          <h3>Intent</h3>
+          <p>We want to know what you will bring to other players' scenes, not how much money you plan to make.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card__num">03</span>
+          <h3>Respect</h3>
+          <p>Written answers tell us a lot about how someone handles a disagreement. Keep it civil, keep it clear.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/i18n.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

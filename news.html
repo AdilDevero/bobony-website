@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News &amp; changelogs — Bobony Roleplay</title>
+  <meta name="description" content="Season announcements, patch notes and community stories from Bobony Roleplay.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="news.html">
+
+<div id="site-header"></div>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="home.html">Home</a> / <span>News</span></div>
+      <span class="eyebrow">The city paper</span>
+      <h1>News &amp; changelogs</h1>
+      <p class="lead">Season announcements, patch notes and the stories the community writes every week. Written by players, published by the city.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="post reveal" style="margin-bottom:22px">
+        <div class="post__media"><span>Season 4</span></div>
+        <div class="post__body">
+          <div class="post__meta">12 November 2026 · Announcement</div>
+          <h3>Season 4 — New Horizon is live</h3>
+          <p>The city reopened this weekend with a reworked persistence layer, a second legal district, and a DOJ suite that finally lets the DA build a real case file. Two hundred and fifty citizens were online at the opening ceremony; the fireworks broke the harbour frame budget, as tradition demands.</p>
+          <p>Housing, insurance and license points carried over. Vehicle economy was reset on purpose — read the migration note before you log in.</p>
+          <a class="link-arrow" href="#season-4">Read the announcement</a>
+        </div>
+      </article>
+
+      <article class="post reveal" style="margin-bottom:22px">
+        <div class="post__media"><span>Patch 4.2</span></div>
+        <div class="post__body">
+          <div class="post__meta">10 November 2026 · Changelog</div>
+          <h3>Patch 4.2 — phone contracts, chop shop balance</h3>
+          <p>Signed contracts now persist across sessions, the chop-shop pipeline pays less for clean VINs and more for rare parts, and EMS treatment items finally stack the way the design doc always said they would.</p>
+          <a class="link-arrow" href="#patch-4-2">Full patch notes</a>
+        </div>
+      </article>
+
+      <article class="post reveal" style="margin-bottom:22px">
+        <div class="post__media"><span>Community</span></div>
+        <div class="post__body">
+          <div class="post__meta">4 November 2026 · Story</div>
+          <h3>The harbour strike that nobody planned</h3>
+          <p>A delivery driver refused to cross a picket line. Forty minutes later, three businesses had shut their doors and the LSPD was negotiating in a parking lot. A write-up of the best unscripted scene of the season, with clips from six perspectives.</p>
+          <a class="link-arrow" href="#harbour-strike">Read the story</a>
+        </div>
+      </article>
+
+      <article class="post reveal">
+        <div class="post__media"><span>Development</span></div>
+        <div class="post__body">
+          <div class="post__meta">28 October 2026 · Roadmap</div>
+          <h3>What we are building next</h3>
+          <p>Courtroom interiors, a player-run newsroom with real distribution, and a rework of the mechanic skill tree. The community poll picked all three; here is the order we are shipping them in and why.</p>
+          <a class="link-arrow" href="#roadmap">See the roadmap</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="season-4">
+    <div class="container layout-side">
+      <aside class="side-toc">
+        <h4>In this issue</h4>
+        <ul>
+          <li><a href="#season-4">Season 4 opening</a></li>
+          <li><a href="#patch-4-2">Patch 4.2 notes</a></li>
+          <li><a href="#harbour-strike">Harbour strike</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+        </ul>
+      </aside>
+
+      <div class="prose">
+        <h2 style="margin-top:0">Season 4 — New Horizon</h2>
+        <p>Fourteen weeks of work, three internal test weekends, and one very tired development team later: the city is open. Here is what changed.</p>
+        <h3>Economy</h3>
+        <ul>
+          <li>Vehicle prices rebalanced against a new inflation index; every class moved, most downward for starter cars.</li>
+          <li>Reputation is now shared across related jobs, so a good mechanic is also a known mechanic.</li>
+          <li>Business ledgers export to the phone, and the DA can request them with a warrant.</li>
+        </ul>
+        <h3>Institutions</h3>
+        <ul>
+          <li>The courthouse has interiors. Cases are scheduled, not improvised in a parking lot.</li>
+          <li>Internal Affairs received its own case queue and anonymous complaint form.</li>
+          <li>EMS gained tiered treatment items and revive gating; triage is a scene again.</li>
+        </ul>
+        <h3>Technical</h3>
+        <ul>
+          <li>Persistence layer rewritten; item loss on reconnect is down to zero in testing.</li>
+          <li>NUI bundle cut by 38%, which is most of why the harbour no longer stutters.</li>
+          <li>Queue system now shows your position and estimated wait.</li>
+        </ul>
+
+        <h2 id="patch-4-2">Patch 4.2 notes</h2>
+        <ul>
+          <li>Phone: contracts, IDs and business documents persist across sessions.</li>
+          <li>Chop shop: clean VIN payouts reduced 20%, rare part drops increased.</li>
+          <li>Prison: workshop jobs now grant trade XP; escape cooldown fixed.</li>
+          <li>MDT: warrant history now searchable by plate and by officer.</li>
+          <li>Housing: fixed furniture desync for apartments above floor nine.</li>
+          <li>Fixed a duplication exploit in the trunk transfer flow — reported by a player, rewarded in game.</li>
+        </ul>
+
+        <h2 id="harbour-strike">The harbour strike</h2>
+        <p>It started with a single refusal. A driver for a player-run logistics company arrived at the docks, saw the picket line his own boss had ignored, and parked the truck.</p>
+        <p>Within forty minutes, three businesses had closed in solidarity, a union spokesperson had appeared on the in-game newspaper's live feed, and the LSPD had sent a lieutenant to negotiate in a parking lot because the harbour office was, technically, closed. Nobody scripted it. Nobody had to.</p>
+        <p>This is the thing we keep saying about serious roleplay: the best scenes are not content. They are consequences.</p>
+
+        <h2 id="roadmap">Roadmap</h2>
+        <p>The community poll closed with 1,842 votes. In shipping order:</p>
+        <ul>
+          <li><strong>Courtroom interiors &amp; scheduling</strong> — in progress.</li>
+          <li><strong>Player-run newsroom</strong> — distribution, printing, street vendors.</li>
+          <li><strong>Mechanic skill tree rework</strong> — prototyping.</li>
+          <li><strong>Second recreational district</strong> — design phase.</li>
+        </ul>
+        <p>Follow the changelog channel in Discord to see patches the day they land.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/i18n.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

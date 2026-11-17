@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Server status — Bobony Roleplay</title>
+  <meta name="description" content="Live status and player counts for the Bobony RP main city server and Bobony RP PvP, plus uptime for the community services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="status.html">
+
+<div id="site-header"></div>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="home.html">Home</a> / <span>Status</span></div>
+      <span class="eyebrow"><span class="dot"></span> All systems operational</span>
+      <h1>Server status</h1>
+      <p class="lead">Live capacity for both servers and the community services around them. Numbers refresh automatically every few seconds.</p>
+
+      <div class="btn-row" style="margin-top:24px">
+        <a class="btn btn--primary btn--sm" href="https://cfx.re/join/6jzpl6" target="_blank" rel="noopener">Join the main server</a>
+        <a class="btn btn--ghost btn--sm" href="https://cfx.re/join/r7kyq8" target="_blank" rel="noopener">Join the PvP server</a>
+        <a class="btn btn--ghost btn--sm" href="connect.html">How to connect</a>
+      </div>
+
+      <p style="margin-top:14px;font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted-soft)">Main city: <b style="color:var(--gold, #e0b64a)">cfx.re/join/6jzpl6</b> &nbsp;·&nbsp; PvP: <b style="color:var(--gold, #e0b64a)">cfx.re/join/r7kyq8</b></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal" style="margin-bottom:26px">
+        <span class="eyebrow">FiveM servers</span>
+        <h2 style="font-size:clamp(1.5rem,2.6vw,2rem)">Live capacity</h2>
+      </div>
+
+      <div class="server-row reveal">
+        <div class="server-row__name">
+          Bobony RP Main City
+          <small>Main server · whitelist required</small>
+        </div>
+        <div>
+          <div class="server-row__players"><span data-server-players="6jzpl6">0</span> <small data-server-capacity="6jzpl6">/ 200</small></div>
+          <div class="meter"><span class="meter__fill" data-server-meter="6jzpl6" style="width:0"></span></div>
+        </div>
+        <span class="status-pill" data-server-pill="6jzpl6"><span class="dot"></span> Live</span>
+      </div>
+
+      <div class="server-row reveal">
+        <div class="server-row__name">
+          Bobony RP PvP
+          <small>Open server · no whitelist</small>
+        </div>
+        <div>
+          <div class="server-row__players"><span data-server-players="r7kyq8">0</span> <small data-server-capacity="r7kyq8">/ 160</small></div>
+          <div class="meter"><span class="meter__fill" data-server-meter="r7kyq8" style="width:0"></span></div>
+        </div>
+        <span class="status-pill" data-server-pill="r7kyq8"><span class="dot"></span> Live</span>
+      </div>
+
+      <div class="btn-row" style="margin-top:26px">
+        <a class="btn btn--ghost btn--sm" href="https://discord.gg/bobonyrp" target="_blank" rel="noopener">Status announcements</a>
+        <a class="btn btn--ghost btn--sm" href="connect.html">How to connect</a>
+      </div>
+
+      <div class="section-head reveal" style="margin-top:64px;margin-bottom:22px">
+        <span class="eyebrow">Community services</span>
+        <h2 style="font-size:clamp(1.5rem,2.6vw,2rem)">Uptime, 30 days</h2>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="card reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px">
+          <div>
+            <h3 style="margin-bottom:4px">Game server</h3>
+            <p style="font-size:0.8rem">99.94% · 2 restarts</p>
+          </div>
+          <span class="status-pill"><span class="dot"></span> Operational</span>
+        </article>
+        <article class="card reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px">
+          <div>
+            <h3 style="margin-bottom:4px">Dashboard &amp; allowlist</h3>
+            <p style="font-size:0.8rem">99.99% · no incidents</p>
+          </div>
+          <span class="status-pill"><span class="dot"></span> Operational</span>
+        </article>
+        <article class="card reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px">
+          <div>
+            <h3 style="margin-bottom:4px">Phone &amp; database layer</h3>
+            <p style="font-size:0.8rem">99.97% · 1 degraded window</p>
+          </div>
+          <span class="status-pill"><span class="dot"></span> Operational</span>
+        </article>
+        <article class="card reveal" style="display:flex;justify-content:space-between;align-items:center;gap:16px">
+          <div>
+            <h3 style="margin-bottom:4px">Voice relay</h3>
+            <p style="font-size:0.8rem">99.90% · 3 short dropouts</p>
+          </div>
+          <span class="status-pill"><span class="dot dot--warn"></span> Monitoring</span>
+        </article>
+      </div>
+
+      <div class="section-head reveal" style="margin-top:64px;margin-bottom:18px">
+        <span class="eyebrow">Incidents</span>
+        <h2 style="font-size:clamp(1.5rem,2.6vw,2rem)">Recent history</h2>
+      </div>
+
+      <div class="grid" style="gap:12px">
+        <div class="card reveal" style="padding:20px 24px">
+          <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center">
+            <div>
+              <h3 style="font-size:1rem;margin-bottom:2px">Voice relay packet loss</h3>
+              <p style="font-size:0.82rem;margin:0">Partial degradation for clients in North Africa. Rerouted to a closer edge node.</p>
+            </div>
+            <span style="font-size:0.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-soft)">Resolved · 9 Nov</span>
+          </div>
+        </div>
+        <div class="card reveal" style="padding:20px 24px">
+          <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center">
+            <div>
+              <h3 style="font-size:1rem;margin-bottom:2px">Scheduled season migration</h3>
+              <p style="font-size:0.82rem;margin:0">Three-hour maintenance window to move the city onto the season 4 database.</p>
+            </div>
+            <span style="font-size:0.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-soft)">Maintenance · 2 Nov</span>
+          </div>
+        </div>
+        <div class="card reveal" style="padding:20px 24px">
+          <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center">
+            <div>
+              <h3 style="font-size:1rem;margin-bottom:2px">Inventory desync after hotfix</h3>
+              <p style="font-size:0.82rem;margin:0">Items appeared twice for a subset of players. Rolled back within eleven minutes.</p>
+            </div>
+            <span style="font-size:0.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-soft)">Resolved · 24 Oct</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/i18n.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

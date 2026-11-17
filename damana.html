@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sponsor a Friend — Bobony Roleplay</title>
+  <meta name="description" content="Damana system: vouch for a friend so they join the review queue with you as their sponsor.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="damana.html">
+
+<div id="site-header"></div>
+
+<main>
+
+  <section class="section" style="padding-top:54px">
+    <div class="container">
+
+      <!-- Signed out -->
+      <div class="form-card" id="damana-lock" hidden style="max-width:560px;margin:0 auto;text-align:center">
+        <span class="auth-gate__icon" style="margin:0 auto 18px">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19 19 0 0 0 15.6 3l-.3.6a14 14 0 0 1 3.5 1.3 13.7 13.7 0 0 0-9.6 0A14 14 0 0 1 12.7 3.6L12.4 3a19 19 0 0 0-4.7 1.4C4.4 9.1 3.3 13.7 3.9 18.2a19 19 0 0 0 5.7 2.9l.7-1.2a12 12 0 0 1-2-1l.5-.4a13.6 13.6 0 0 0 10.4 0l.5.4a12 12 0 0 1-2 1l.7 1.2a19 19 0 0 0 5.7-2.9c.7-5.2-.9-9.8-3.8-13.8ZM9.3 15.4c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.9 2.2-1.9 2.2Zm5.4 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2Z"/></svg>
+        </span>
+        <h3>Sign in to sponsor a friend</h3>
+        <p>The Damana system is for whitelisted citizens. Sign in with Discord so we know who is vouching.</p>
+        <a class="btn btn--primary" href="/auth/discord" style="width:100%">Sign in with Discord</a>
+      </div>
+
+      <!-- Signed in -->
+      <div id="damana-app" hidden>
+
+        <div class="damana__head">
+          <div>
+            <div class="breadcrumb" style="margin-bottom:10px"><a href="dashboard.html">Dashboard</a> / <span>Damana system</span></div>
+            <h1 style="font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:6px">Sponsor a Friend</h1>
+            <p style="font-size:0.9rem;margin:0;color:var(--muted)">Enter your friend's details. Staff will review and approve or deny the request.</p>
+          </div>
+          <a class="btn btn--ghost btn--sm" href="dashboard.html">Back to dashboard</a>
+        </div>
+
+        <div id="damana-history" class="damana__history" hidden></div>
+
+        <div class="damana__grid">
+
+          <form id="damana-form" class="damana__form" novalidate>
+
+            <section class="dm-panel">
+              <div class="dm-panel__head">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c.6-3.6 3.5-5.6 7-5.6s6.4 2 7 5.6"/></svg>
+                <h2>Sponsored Player</h2>
+              </div>
+
+              <div class="field">
+                <label for="friend-discord-id">Friend's Discord ID</label>
+                <input id="friend-discord-id" name="friendDiscordId" type="text" inputmode="numeric" placeholder="e.g. 1092371937312338154">
+                <small class="dm-hint">Enable Discord Developer Mode to copy your friend's numeric ID.</small>
+              </div>
+
+              <div class="field">
+                <label for="friend-username">Friend's Discord username</label>
+                <input id="friend-username" name="friendUsername" type="text" placeholder="e.g. shadow_player">
+              </div>
+
+              <div class="field">
+                <label for="server-type">Server type</label>
+                <select id="server-type" name="serverType">
+                  <option value="Roleplay (RP)">Roleplay (RP)</option>
+                </select>
+                <small class="dm-hint dm-hint--ok">Only server types you're whitelisted for are shown.</small>
+              </div>
+            </section>
+
+            <section class="dm-panel">
+              <div class="dm-panel__head">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.4 6.8 19.2l1-5.9L3.5 9.2l5.9-.8Z"/></svg>
+                <h2>About Your Friend</h2>
+              </div>
+
+              <div class="field" style="max-width:260px">
+                <label for="friend-age">How old is your friend?</label>
+                <input id="friend-age" name="friendAge" type="number" min="16" max="99" placeholder="e.g. 21">
+              </div>
+            </section>
+
+            <section class="dm-panel">
+              <div class="dm-panel__head">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v4l2.5 2.5"/></svg>
+                <h2>Player Experience</h2>
+              </div>
+
+              <div class="field">
+                <label for="experience">Describe your friend's past GTA RP experience</label>
+                <textarea id="experience" name="experience" placeholder="Which servers have they played on? What roles or factions have they been part of?"></textarea>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="hours-played">Friend's hours played in GTA RP (total)</label>
+                  <input id="hours-played" name="hoursPlayed" type="text" placeholder="e.g. 200">
+                </div>
+                <div class="field">
+                  <label for="availability">Friend's weekly availability</label>
+                  <input id="availability" name="availability" type="text" placeholder="e.g. 15 hours/week">
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="previous-servers">Servers your friend has previously played on (optional)</label>
+                <input id="previous-servers" name="previousServers" type="text" placeholder="e.g. Canixa, Adrenaline (leave blank if new to RP servers)">
+              </div>
+            </section>
+
+            <section class="dm-panel">
+              <div class="dm-panel__head">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg>
+                <h2>Friend's Character Sheet</h2>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="character-name">Character full name</label>
+                  <input id="character-name" name="characterName" type="text" placeholder="e.g. Lucas James">
+                </div>
+                <div class="field">
+                  <label for="character-age">Character age</label>
+                  <input id="character-age" name="characterAge" type="number" min="18" max="99" placeholder="e.g. 26">
+                </div>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="nationality">Character nationality</label>
+                  <input id="nationality" name="nationality" type="text" placeholder="e.g. Moroccan">
+                </div>
+                <div class="field">
+                  <label for="faction">Desired role / faction</label>
+                  <select id="faction" name="faction">
+                    <option value="">Select a role…</option>
+                    <optgroup label="Legal">
+                      <option>BCPD : Bobony City Police Department</option>
+                      <option>BCSD : Bobony Sheriff Department</option>
+                      <option>DOJ : Department of Justice</option>
+                      <option>EMS : Bobony City Emergency Medical Services</option>
+                      <option>DMV : Bobony Department of Motor Vehicles</option>
+                      <option>Law Firm : Bobony City Law Firm</option>
+                    </optgroup>
+                    <optgroup label="Civilian">
+                      <option>Garage : Bobony City Auto Repair</option>
+                      <option>Dealer : Bobony City Vehicle Dealership</option>
+                      <option>Insurance : National Auto Insurance Agency</option>
+                      <option>Casino : Diamond Casino Bobony City</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="personality">Personality</label>
+                <textarea id="personality" name="personality" placeholder="How does your character act, think, and react under pressure?"></textarea>
+              </div>
+
+              <div class="field">
+                <label for="principles">Principles &amp; values</label>
+                <textarea id="principles" name="principles" placeholder="What does your character believe in? What is a limit they would never cross?"></textarea>
+              </div>
+
+              <div class="field">
+                <label for="backstory">Backstory</label>
+                <textarea id="backstory" name="backstory" placeholder="Who is your character? Where do they come from? What brought them to the city?"></textarea>
+                <small class="dm-hint dm-hint--count" id="backstory-count">0 / 300 characters minimum</small>
+              </div>
+            </section>
+
+            <section class="dm-panel">
+              <div class="dm-panel__head">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 7.6-7 9.5-4.1-1.9-7-5.2-7-9.5V6Z"/><path d="M9 12l2 2 4-4"/></svg>
+                <h2>Sponsor Attestation</h2>
+              </div>
+
+              <label class="check"><input type="checkbox" id="accept-rules"> <span>I confirm my friend has read and agrees to the <a href="rules.html">server rules</a>.</span></label>
+              <label class="check"><input type="checkbox" id="accept-privacy"> <span>I confirm my friend agrees to the <a href="privacy.html">privacy policy</a>.</span></label>
+
+              <button class="btn btn--primary btn--block" type="submit" id="damana-submit">Submit sponsorship request</button>
+              <p class="form-note" id="damana-note" style="margin-top:14px;text-align:center"></p>
+            </section>
+          </form>
+
+          <aside class="how-card">
+            <div class="how-card__head">
+              <span class="how-card__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4.9 1 .9 1.7V17h5.2v-1.4c0-.7.3-1.3.9-1.7A6 6 0 0 0 12 3Z"/></svg>
+              </span>
+              <h2>How it works</h2>
+            </div>
+
+            <ol class="how-list">
+              <li>Fill in your friend's Discord info and submit.</li>
+              <li>Staff review your request, usually within 24–48 hours.</li>
+              <li>If approved, your friend's dossier enters the normal review queue — Story Review, then PC Check, then a final vocal interview — just like a regular application.</li>
+              <li>You are responsible for their conduct for 30 days.</li>
+            </ol>
+
+            <p class="how-note">Requires a minimum of 20 hours of server playtime.</p>
+          </aside>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="damana-done" hidden style="padding-top:0">
+    <div class="container">
+      <div class="form-card" style="max-width:640px;margin:0 auto;text-align:center">
+        <span class="how-card__icon" style="margin:0 auto 16px;width:52px;height:52px">
+          <svg viewBox="0 0 24 24" aria-hidden="true" style="width:24px;height:24px"><path d="M20 6 9.5 17 4 11.5"/></svg>
+        </span>
+        <h2 style="font-size:1.5rem;margin-bottom:8px">Request submitted</h2>
+        <p style="font-size:0.92rem">Staff will review your sponsorship within 24–48 hours. If it's approved, your friend's application enters the normal review queue and you'll see the status below.</p>
+        <div class="btn-row" style="justify-content:center;margin-top:22px">
+          <a class="btn btn--primary btn--sm" href="dashboard.html">Back to dashboard</a>
+          <a class="btn btn--ghost btn--sm" href="damana.html">Sponsor someone else</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/i18n.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/damana.js"></script>
+</body>
+</html>
